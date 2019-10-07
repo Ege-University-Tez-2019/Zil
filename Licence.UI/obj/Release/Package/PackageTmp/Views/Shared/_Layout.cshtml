@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>Automation Software | eselfware by ENER</title>
+    <link rel="icon" href="~/Content/Template/e.png">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="~/Content/Template/css/style.css">
+
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="~/Content/Template/css/responsive.css">
+
+
+
+    <style type="text/css">
+        .fix-menu {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            top: 0 !important;
+            position: fixed;
+            left: 0 !important;
+            z-index: 99999 !important;
+        }
+
+        .fix-tabBar {
+            width: 100%;
+            height: 26px;
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div style="background-color:black;width:100%;height:25px;color:white;display:block;">
+        <select class="selectpicker" data-width="fit" style="margin-left: 17%;">
+            <option data-content='<span class="flag-icon flag-icon-us"></span> Turkish'>Türkçe</option>
+            <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+            <option data-content='<span class="flag-icon flag-icon-us"></span> Germany'>Germany</option>
+        </select>
+
+        <h4 style="color:white;font:bold;float:right;font-size: 16px;margin-right: 18%;"> İletişim : 0232 433 14 35</h4>
+
+        <a href="/Download" style="color:black;font-family:'Open Sans' ;color:white;font:bold;float:right;font-size: 16px;margin-right: 5%;">İndir</a>
+
+
+    </div>
+
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area fadeInDown" data-wow-delay="0.2s">
+        <div class="classy-nav-container light breakpoint-off">
+
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="dreamNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand light" href="#"><img src="~/Content/Template/img/logo.png" style="width:55%" alt="logo"></a> 
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler demo">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav"> 
+
+
+                                    <li><a href="#home" style="color:black;font-family: Verdana" >Anasayfa</a></li>
+                                    <li><a href="#about" style="color:black;font-family:Verdana">Hakkında</a></li>
+                                    <li><a href="#services" style="color:black;font-family:Verdana">Hizmetler</a></li>
+                                    <li>
+                            </ul>
+
+                            <!-- Button -->
+                            <a href="/CreateUserPage" class="btn login-btn ml-50">Kayıt Ol</a>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+    <div class="light-version">
+
+
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="preload-content">
+                <div id="dream-load"></div>
+            </div>
+        </div>
+
+
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <!-- ##### Footer Area Start ##### -->
+        <footer class="footer-area bg-img" style="background-image: url(~/Content/Template/img/core-img/pattern.png);">
+
+
+            <div class="footer-content-area ">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 col-lg-4 col-md-6">
+                            <div class="footer-copywrite-info">
+                                <!-- Copywrite -->
+                                <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
+                                    <div class="footer-logo">
+                                        <img href="#" src="~/Content/Template/eself.png" alt="logo" style="width: 30%; height: 40%" />
+                                    </div>
+                                    <p>Bizi sosyal medyada takip ederek, son güncellemeler ve projelerimizden haberdar olabilirsiniz.</p>
+                                </div>
+                                <!-- Social Icon -->
+                                <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
+                                    <a href="https://tr-tr.facebook.com/enerotomasyon" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.linkedin.com/company/enerotomasyon/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="contact_info_area d-sm-flex justify-content-between">
+                                <!-- Content Info -->
+                                <div class="contact_info mt-x text-center fadeInUp" data-wow-delay="0.3s">
+                                    <h5>PRIVACY & TOS</h5>
+                                    <a href="">
+                                        <p>Reklam veren Anlaşması</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Kabul edilebilir kullanım politikası</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Gizlilik Politikası</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Teknoloji Gizliliği</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Geliştirici Anlaşması</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-2 col-md-6 ">
+                            <!-- Content Info -->
+                            <div class="contact_info_area d-sm-flex justify-content-between">
+                                <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
+                                    <h5>NAVIGATE</h5>
+                                    <a href="">
+                                        <p>Reklamverenler</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Geliştiriciler</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Kaynaklar</p>
+                                    </a>
+                                    <a href="">
+                                        <p>Şirket</p>
+                                    </a>
+                                    <a href="">
+                                        <p>İletişim</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-12 col-lg-3 col-md-6 ">
+                            <div class="contact_info_area d-sm-flex justify-content-between">
+                                <!-- Content Info -->
+                                <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
+                                    <h5>İletişime Geç</h5>
+                                    <p>info@enerotomasyon.com.tr</p>
+                                    <hr />
+                                    <p>ÇINARLI Mahallesi 1587 Sokak No:2-6 Ater Tower K:14 D:1404, 35170 Konak, Turkey</p>
+                                    <p>0232 433 14 35</p>
+                                    <p>enerotomasyon.com.tr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+
+    </div>
+
+
+    <!-- ##### Footer Area End ##### -->
+    <!-- ########## All JS ########## -->
+    <!-- jQuery js -->
+    <script src="~/Content/Template/js/jquery.min.js"></script>
+
+    <!-- Popper js -->
+    <script src="~/Content/Template/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/Content/Template/js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/Content/Template/js/plugins.js"></script>
+    <!-- Parallax js -->
+    <script src="~/Content/Template/js/dzsparallaxer.js"></script>
+
+    <script src="~/Content/Template/js/jquery.syotimer.min.js"></script>
+
+    <!-- script js -->
+    <script src="~/Content/Template/js/script.js"></script>
+
+
+</body>
+</html>

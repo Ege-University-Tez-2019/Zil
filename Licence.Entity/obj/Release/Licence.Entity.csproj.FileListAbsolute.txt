@@ -1,0 +1,12 @@
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\Licence.Entity.dll.config
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\Licence.Entity.dll
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\Licence.Entity.pdb
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\EntityFramework.dll
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\EntityFramework.xml
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\obj\Release\Licence.Entity.csprojAssemblyReference.cache
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\obj\Release\Licence.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\obj\Release\Licence.Entity.csproj.CopyComplete
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\obj\Release\Licence.Entity.dll
+C:\Users\Ener Automation\source\repos\Licence\Licence.Entity\obj\Release\Licence.Entity.pdb
