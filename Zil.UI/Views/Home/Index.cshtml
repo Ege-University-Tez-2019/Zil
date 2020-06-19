@@ -1,0 +1,222 @@
+﻿
+@model List<Courses>
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="section3125 mt-50">
+    <h4 class="item_title">Kurslar</h4>
+    <div class="la5lo1">
+        <div class="owl-carousel featured_courses owl-theme">
+            @foreach (var item in Model)
+            {
+
+                <div class="item">
+                    <div class="fcrse_1 mb-20">
+                        <a href="/@item._id/@item.CreatedUserId" class="fcrse_img">
+                            <img src="~/template/images/courses/img-1.jpg" alt="">
+                            <div class="course-overlay">
+                                @if (item.CoursePlatform == null)
+                                {
+                                    <div class="badge_seller">Birebir Eğitim</div>
+                                }
+                                else
+                                {
+                                    <div class="badge_seller">Online Eğitim</div>
+                                }
+
+                                <span class="play_btn1"><i class="uil uil-play"></i></span>
+
+                            </div>
+                        </a>
+                        <div class="fcrse_content">
+                            <div class="eps_dots more_dropdown">
+                                <a href="#"><i class='uil uil-ellipsis-v'></i></a>
+                                <div class="dropdown-content">
+                                    <span><i class='uil uil-share-alt'></i>Paylaş</span>
+                                    <span><i class="uil uil-clock-three"></i>Kaydet</span>
+                                    <span><i class="uil uil-windsock"></i>Raporla</span>
+                                </div>
+                            </div>
+                            <div class="vdtodt">
+                                Yer :
+                                @if (item.CoursePlatform != null)
+                                {
+                                    <span class="vdt14">Online Platform</span>
+                                }
+                                else
+                                {
+                                    <span class="vdt14">@item.CityId</span>
+                                    <span class="vdt14">@item.StateId</span>
+                                }
+
+
+
+                            </div>
+                            <a href="/@item._id/@item.CreatedUserId" class="crse14s">@item.CourseTitle</a>
+                            <a href="#" class="crse-cate">@item.CourseSubtitle | @item.CourseCategory</a>
+                            <div class="auth1lnkprce">
+                                <p class="cr1fot"><a href="">@item.CreatedUser</a></p>
+                                <div class="prce142">@item.Price ₺</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@foreach (var item in Model)
+    {
+        <div class="_215b01">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section3125">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4 col-lg-5 col-md-6">
+                                    <div class="preview_video">
+                                        <a href="#" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
+                                            <img src="~/template/images/courses/img-1.jpg" alt="">
+                                            <div class="course-overlay">
+                                                <div class="badge_seller">Çok Satanlar</div>
+                                                <span class="play_btn1"><i class="uil uil-play"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="_215b10">
+                                        <a href="#" class="_215b11">
+                                            <span><i class='uil uil-heart-alt'></i></span>Beğeni
+                                        </a>
+                                        <a href="#" class="_215b12">
+                                            <span><i class="uil uil-windsock"></i></span>Kötüye Kullanım
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-7 col-md-6">
+                                    <div class="_215b03">
+                                        <h2>@item.CourseTitle</h2>
+                                        <span class="_215b04">@item.CourseSubtitle | @item.CourseDescription</span>
+                                    </div>
+                                    <div class="_215b05">
+                                        <div class="crse_reviews mr-2">
+                                            <i class="uil uil-star"></i>4.5
+                                        </div>
+                                        (81,665 oy)
+                                    </div>
+                                    <div class="_215b05">
+                                        114,521 öğrenci kayıtlı
+                                    </div>
+                                    <div class="_215b06">
+                                        <div class="_215b07">
+                                            <span><i class='uil uil-comment'></i></span>
+                                            @item.CourseLanguage
+                                        </div>
+                                        <div class="_215b08">
+                                            <span><i class='uil uil-closed-captioning'></i></span>
+                                            <span>
+                                                @item.CourseLanguage ,
+                                                <span class="caption_tooltip">
+                                                    12 more
+                                                    <span class="caption-content">
+                                                        <span>French</span>
+                                                        <span>Hindi</span>
+                                                        <span>German [Auto-generated]</span>
+                                                        <span>Indonesian [Auto-generated]</span>
+                                                        <span>Italian [Auto-generated]</span>
+                                                        <span>Japanese [Auto-generated]</span>
+                                                        <span>Korean</span>
+                                                        <span>Polish</span>
+                                                        <span>Portuguese [Auto-generated]</span>
+                                                        <span>Spanish [Auto-generated]</span>
+                                                        <span>Traditional Chinese</span>
+                                                        <span>Turkish [Auto-generated]</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="_215b05">
+                                        Son Güncelleme 1/2020
+                                    </div>
+                                    <ul class="_215b31">
+                                        <li><button class="btn_adcart">Daha Fazla</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="_215b15 _byt1458">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="user_dt5">
+                            <div class="user_dt_left">
+                                <div class="live_user_dt">
+                                    <div class="user_img5">
+                                        <a href="#"><img src="~/template/images/left-imgs/img-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="user_cntnt">
+                                        <a href="#" class="_df7852">@item.CreatedUser</a>
+                                        <button class="subscribe-btn">Takip Et</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_dt_right">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="lkcm152"><i class="uil uil-eye"></i><span>1452</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="lkcm152"><i class="uil uil-thumbs-up"></i><span>100</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="lkcm152"><i class="uil uil-thumbs-down"></i><span>20</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="lkcm152"><i class="uil uil-share-alt"></i><span>9</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }*@
+
+
+
+
+
+
+
+

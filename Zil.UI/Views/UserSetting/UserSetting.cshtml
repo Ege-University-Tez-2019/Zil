@@ -1,0 +1,214 @@
+﻿@{
+    ViewData["Title"] = "UserSetting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    UserSettingModel userSet = Model;
+}
+
+
+<div class="wrapper">
+    <div class="sa4d25">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="st_title"><i class='uil uil-cog'></i> Ayarlar</h2>
+                    <div class="setting_tabs">
+                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-account-tab" data-toggle="pill" href="#pills-account" role="tab" aria-selected="true">Hesap</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab">
+                            <div class="account_setting">
+                                <h4>Profil Ayarları</h4>
+                                <p>Bu sizin Zil'deki kamusal varlığınız. Ücretli kurslarınızı yüklemek, kurslar hakkında yorum yapmak, öğrenciler tarafından satın alınan veya kazanç elde etmek için bir hesaba ihtiyacınız var.</p>
+                                <div class="basic_profile">
+                                    <div class="basic_ptitle">
+                                        <h4>Profile</h4>
+                                        <p>Lütfen bilgileriniz ekleyin</p>
+                                    </div>
+                                    <div class="basic_form">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="row">
+
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="name" value="@userSet.UserName" id="id_name" required="" maxlength="64" placeholder="Ad Soyad">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="job" value="@userSet.UserJob" id="id_job" required="" maxlength="60" placeholder="Meslek">
+                                                                <div class="form-control-counter" data-purpose="form-control-counter">36</div>
+                                                            </div>
+                                                            <div class="help-block">"Zil'de "Mühendis" veya "Mimar" gibi profesyonel bir başlık ekleyin."</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="headline" value="@userSet.Telephone" id="id_telephone" required="" maxlength="60" placeholder="Telefon">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="headline" value="@userSet.Email" id="id_email" required="" maxlength="60" placeholder="E mail">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="date" name="dateofbirth" value="@userSet.BirthDay" id="id_dateofbirth">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="lbel25 mt-30">
+                                                            <select class="ui hj145 dropdown cntry152 prompt srch_explore" value="@userSet.Gender" id="id_gender" name="card[expire-month]">
+                                                                <option value="Erkek">Erkek</option>
+                                                                <option value="Kadın">Kadın</option>
+                                                                <option value="Belirtmek İstemiyorum">Belirtmek İstemiyorum</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-lg-12">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui form swdh30">
+                                                                <div class="field">
+                                                                    @Html.TextArea("id_about", @userSet.UserDescription, new { rows = "3", type = "text", name = "description", placeholder = "Hakkında kısaca bilgi verebilirsin..." })
+                                                                </div>
+                                                            </div>
+                                                            <div class="help-block">Bu bölümde bağlantılara ve kupon kodlarına izin verilmiyor.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="school" value="@userSet.UserSchool" id="id_school" required="" maxlength="60" placeholder="Okul">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="divider-1"></div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="country" value="@userSet.UserCountry" id="id_country" required="" maxlength="60" placeholder="Şehir Giriniz">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon input swdh11 swdh19">
+                                                                <input class="prompt srch_explore" type="text" name="addressname" value="@userSet.UserAdress" id="id_address" required="" maxlength="64" placeholder="Adres">
+                                                                <div class="form-control-counter" data-purpose="form-control-counter">136</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="basic_profile1">
+                                    <div class="basic_ptitle">
+                                        <h4>Profil Linklerin</h4>
+                                    </div>
+                                    <div class="basic_form">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="row">
+
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon labeled input swdh11 swdh31">
+                                                                <div class="ui label lb12">
+                                                                    https://
+                                                                </div>
+                                                                <input class="prompt srch_explore" type="text" name="site" value="@userSet.UserWebSite" id="id_site" required="" maxlength="64" placeholder="website.com">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon labeled input swdh11 swdh31">
+                                                                <div class="ui label lb12">
+                                                                    twitter.com/
+                                                                </div>
+                                                                <input class="prompt srch_explore" value="@userSet.UserTwitter" type="text" name="twitterlink" id="id_twitter" required="" maxlength="64" placeholder="Twitter Profile">
+                                                            </div>
+                                                            <div class="help-block">Twitter bağlantınız .</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon labeled input swdh11 swdh31">
+                                                                <div class="ui label lb12">
+                                                                    linkedin.com/
+                                                                </div>
+                                                                <input class="prompt srch_explore" value="@userSet.UserLinkedin" type="text" name="linkedinlink" id="id_linkedin" required="" maxlength="64" placeholder="Linkedin Profile">
+                                                            </div>
+                                                            <div class="help-block">Linkedin bağlantınız .</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ui search focus mt-30">
+                                                            <div class="ui left icon labeled input swdh11 swdh31">
+                                                                <div class="ui label lb12">
+                                                                    youtube.com/
+                                                                </div>
+                                                                <input class="prompt srch_explore" type="text" value="@userSet.UserYoutube" name="youtubelink" id="id_youtube" required="" maxlength="64" placeholder="Youtube Profile">
+                                                            </div>
+                                                            <div class="help-block">Youtube bağlantınız .</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="save_btn" id="btn_userSetting" type="submit">Değişiklikleri Kaydet</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/template/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/Util/Ajax.js"></script>
+<script src="~/js/UserSetting/UserSettings.js"></script>
+<script>
+    document.getElementById('id_telephone').addEventListener('input', function (e) {
+        var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    });
+</script>

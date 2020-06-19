@@ -1,0 +1,11 @@
+C:\Users\ener-\source\repos\Zil\Zil.Repository\bin\Debug\netcoreapp3.1\Zil.Repository.deps.json
+C:\Users\ener-\source\repos\Zil\Zil.Repository\bin\Debug\netcoreapp3.1\Zil.Repository.dll
+C:\Users\ener-\source\repos\Zil\Zil.Repository\bin\Debug\netcoreapp3.1\Zil.Repository.pdb
+C:\Users\ener-\source\repos\Zil\Zil.Repository\bin\Debug\netcoreapp3.1\Zil.Entity.dll
+C:\Users\ener-\source\repos\Zil\Zil.Repository\bin\Debug\netcoreapp3.1\Zil.Entity.pdb
+C:\Users\ener-\source\repos\Zil\Zil.Repository\obj\Debug\netcoreapp3.1\Zil.Repository.csprojAssemblyReference.cache
+C:\Users\ener-\source\repos\Zil\Zil.Repository\obj\Debug\netcoreapp3.1\Zil.Repository.AssemblyInfoInputs.cache
+C:\Users\ener-\source\repos\Zil\Zil.Repository\obj\Debug\netcoreapp3.1\Zil.Repository.AssemblyInfo.cs
+C:\Users\ener-\source\repos\Zil\Zil.Repository\obj\Debug\netcoreapp3.1\Zil.Repository.csproj.CopyComplete
+C:\Users\ener-\source\repos\Zil\Zil.Repository\obj\Debug\netcoreapp3.1\Zil.Repository.dll
+C:\Users\ener-\source\repos\Zil\Zil.Repository\obj\Debug\netcoreapp3.1\Zil.Repository.pdb

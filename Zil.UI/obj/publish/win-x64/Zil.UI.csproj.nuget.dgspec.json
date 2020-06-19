@@ -1,0 +1,312 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.UI\\Zil.UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Client\\Zil.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Client\\Zil.Client.csproj",
+        "projectName": "Zil.Client",
+        "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Client\\Zil.Client.csproj",
+        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Entity\\Zil.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Entity\\Zil.Entity.csproj",
+        "projectName": "Zil.Entity",
+        "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Entity\\Zil.Entity.csproj",
+        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Repository\\Zil.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Repository\\Zil.Repository.csproj",
+        "projectName": "Zil.Repository",
+        "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Repository\\Zil.Repository.csproj",
+        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Entity\\Zil.Entity.csproj": {
+                "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Entity\\Zil.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.UI\\Zil.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.UI\\Zil.UI.csproj",
+        "projectName": "Zil.UI",
+        "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.UI\\Zil.UI.csproj",
+        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.UI\\obj\\publish\\win-x64\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Client\\Zil.Client.csproj": {
+                "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Client\\Zil.Client.csproj"
+              },
+              "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Repository\\Zil.Repository.csproj": {
+                "projectPath": "C:\\Users\\ener-\\source\\repos\\Zil\\Zil.Repository\\Zil.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Razor.Runtime": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[3.1.2, 3.1.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[3.1.2, 3.1.2]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

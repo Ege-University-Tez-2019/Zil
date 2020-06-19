@@ -1,0 +1,8 @@
+C:\Users\ener-\source\repos\Zil\Zil.Client\bin\Debug\netcoreapp3.1\Zil.Client.deps.json
+C:\Users\ener-\source\repos\Zil\Zil.Client\bin\Debug\netcoreapp3.1\Zil.Client.dll
+C:\Users\ener-\source\repos\Zil\Zil.Client\bin\Debug\netcoreapp3.1\Zil.Client.pdb
+C:\Users\ener-\source\repos\Zil\Zil.Client\obj\Debug\netcoreapp3.1\Zil.Client.csprojAssemblyReference.cache
+C:\Users\ener-\source\repos\Zil\Zil.Client\obj\Debug\netcoreapp3.1\Zil.Client.AssemblyInfoInputs.cache
+C:\Users\ener-\source\repos\Zil\Zil.Client\obj\Debug\netcoreapp3.1\Zil.Client.AssemblyInfo.cs
+C:\Users\ener-\source\repos\Zil\Zil.Client\obj\Debug\netcoreapp3.1\Zil.Client.dll
+C:\Users\ener-\source\repos\Zil\Zil.Client\obj\Debug\netcoreapp3.1\Zil.Client.pdb

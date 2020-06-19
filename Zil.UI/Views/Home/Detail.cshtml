@@ -1,0 +1,163 @@
+﻿ 
+@model Courses
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+  
+
+<!-- Body Start -->
+<div class="wrapper _bg4586">
+    <div class="_215b01">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section3125">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="preview_video">
+                                    <a href="#" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
+                                        <img src="~/template/images/courses/img-1.jpg" alt="">
+                                        <div class="course-overlay">
+                                            @if (Model.CoursePlatform == null)
+                                            {
+                                                <div class="badge_seller">Birebir Eğitim</div>
+                                            }
+                                            else
+                                            {
+                                                <div class="badge_seller">Online Eğitim</div>
+                                            }
+                                             
+
+
+                                            <span class="play_btn1"><i class="uil uil-play"></i></span>
+                                            <span class="_215b02">Kurs Önizleme</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="_215b10">
+                                    <a href="#" class="_215b11">
+                                        <span><i class='uil uil-heart-alt'></i></span>İstek
+                                    </a>
+                                    <a href="#" class="_215b12">
+                                        <span><i class="uil uil-windsock"></i></span>Şikayet
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-7 col-md-6">
+                                <div class="_215b03">
+                                    <h2>@Model.CourseTitle</h2>
+                                    <span class="_215b04">@Model.CourseSubtitle</span>
+                                </div>
+                                <div class="_215b05">
+                                    <div class="crse_reviews mr-2">
+                                        <i class="uil uil-star"></i>4.5
+                                    </div>
+                                    (81,665 ratings)
+                                </div>
+                                <div class="_215b05">
+                                    114,521 students enrolled
+                                </div>
+                                <div class="_215b06">
+                                    <div class="_215b07">
+                                        <span><i class='uil uil-comment'></i></span>
+                                        @Model.CourseLanguage
+                                    </div> 
+                                </div> 
+                                <ul class="_215b31"> 
+                                    <li><button class="btn_buy">Dersi Satın Al(Katıl)</button></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="_215b15 _byt1458">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="user_dt5">
+                        <div class="user_dt_left">
+                            <div class="live_user_dt">
+                                <div class="user_img5">
+                                    <a href="#"><img src="images/left-imgs/img-1.jpg" alt=""></a>
+                                </div>
+                                <div class="user_cntnt">
+                                    <a href="#" class="_df7852">@Model.CreatedUser</a>
+                                    <button class="subscribe-btn">Profile Git</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user_dt_right">
+                            <ul>
+                                <li>
+                                    <a href="#" class="lkcm152"><i class="uil uil-eye"></i><span>1452</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="lkcm152"><i class="uil uil-thumbs-up"></i><span>100</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="lkcm152"><i class="uil uil-thumbs-down"></i><span>20</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="lkcm152"><i class="uil uil-share-alt"></i><span>9</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="course_tabs">
+                        <nav>
+                            <div class="nav nav-tabs tab_crse justify-content-center" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-selected="true">Hakkında</a>
+                                @*<a class="nav-item nav-link" id="nav-courses-tab" data-toggle="tab" href="#nav-courses" role="tab" aria-selected="false">Kurs İçeriği</a>
+                                <a class="nav-item nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="false">Yorumlar</a>*@
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="_215b17">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="course_tab_content">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                                <div class="_htg451">
+                                    <div class="_htg452">
+                                        <h3>Gereksinimler</h3>
+                                        <ul>
+                                            <li><span class="_5f7g11">@Model.CoursePrecondition</span></li> 
+                                        </ul>
+                                    </div>
+                                    <div class="_htg452 mt-35">
+                                        <h3>Açıklama</h3>
+                                        <p>@Model.CourseDescription:</p> 
+                                    </div> 
+
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- Body End -->

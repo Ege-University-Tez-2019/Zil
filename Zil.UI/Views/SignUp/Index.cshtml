@@ -1,0 +1,136 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUp</title>
+
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <!-- Stylesheets -->
+    <link href='~/template/vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+    <link href="~/template/css/vertical-responsive-menu.min.css" rel="stylesheet">
+    <link href="~/template/css/style.css" rel="stylesheet">
+    <link href="~/template/css/responsive.css" rel="stylesheet">
+    <link href="~/template/css/night-mode.css" rel="stylesheet">
+    <!-- Vendor Stylesheets -->
+    <link href="~/template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="~/template/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="~/template/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="~/template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/template/vendor/semantic/semantic.min.css">
+</head>
+<body>
+    <!-- Signup Start -->
+    <div class="sign_in_up_bg">
+        <div class="container">
+            <div class="row justify-content-lg-center justify-content-md-center">
+                <div class="col-lg-12">
+                    <div class="main_logo25" id="logo">
+                        <a href="anasayfa"><img src="~/image/dsBuffer.bmp.png" style="width:60%" alt=""></a>
+                        <a href="index.html"><img class="logo-inverse" src="~/template/images/ct_logo.svg" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-8">
+                    <div class="sign_form">
+                        <h2>Hoşgeldiniz</h2>
+                        <p>Kayıt Olarak Başlayabilirsiniz</p>
+                        <form>
+                            <div class="ui search focus">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore" type="text" name="fullname" value="" id="id_fullname" required="" maxlength="64" placeholder="Ad Soyad">
+                                </div>
+                            </div>
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore" type="email" name="emailaddress" value="" id="id_email" required="" maxlength="64" placeholder="E-posta">
+                                </div>
+                            </div>
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore" type="password" name="password" value="" id="id_password" required="" maxlength="64" placeholder="Şifre">
+                                </div>
+                            </div>
+
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore" type="text" id="id_phone" placeholder="(555) 555-5555" />
+                                </div>
+                            </div>
+
+
+
+                            <div class="ui form mt-30 checkbox_sign">
+                                <div class="inline field">
+                                    <div class="ui checkbox mncheck">
+                                        <input type="checkbox" tabindex="0" class="hidden">
+                                        <label>Heyecan verici indirimler ve kişiselleştirilmiş öneriler içeren e-postalar almayı kabul ediyorum</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6" id="divError" style="text-align: right; color: orangered">
+                                <span id="spanhata" />
+                            </div>
+
+                            <button type="button" class="btn btn-primary btn-block btn-c mt-4 mb-4" id="btnSignup"><span id="spanBtnLoginText">Kayıt Ol</span></button>
+
+
+
+                        </form>
+                        <p class="sgntrm145">Kaydolarak <a href="terms_of_use.html">Kullanım Şartları</a> ve <a href="terms_of_use.html">Gizlilik Politikamızı</a> kabul etmiş olursunuz.</p>
+
+                        <p class="mb-0 mt-30">Zaten bir hesabınız var mı? <a href="giris-yap">Giriş Yap</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="getCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"> BAŞARILI</h4>
+                </div>
+                <div class="modal-body" id="getCode" style="overflow-x: scroll;">
+                    LÜTFEN GİRİŞ YAPINIZ
+                </div>
+
+                <a href="giris-yap">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('id_phone').addEventListener('input', function (e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+    </script>
+
+
+
+    <script src="~/template/js/jquery-3.3.1.min.js"></script>
+    <!-- Signup End -->
+    <script src="~/js/Util/Ajax.js"></script>
+    <script src="~/js/signup/SignUp.js"></script>
+    <script src="~/template/js/jquery-3.3.1.min.js"></script>
+    <script src="~/template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/template/vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="~/template/vendor/semantic/semantic.min.js"></script>
+    <script src="~/template/js/custom.js"></script>
+    <script src="~/template/js/night-mode.js"></script>
+
+</body>
+</html>

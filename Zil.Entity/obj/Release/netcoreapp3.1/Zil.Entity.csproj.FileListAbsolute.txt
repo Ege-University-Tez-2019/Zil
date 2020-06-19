@@ -1,0 +1,8 @@
+C:\Users\ener-\source\repos\Zil\Zil.Entity\bin\Release\netcoreapp3.1\Zil.Entity.deps.json
+C:\Users\ener-\source\repos\Zil\Zil.Entity\bin\Release\netcoreapp3.1\Zil.Entity.dll
+C:\Users\ener-\source\repos\Zil\Zil.Entity\bin\Release\netcoreapp3.1\Zil.Entity.pdb
+C:\Users\ener-\source\repos\Zil\Zil.Entity\obj\Release\netcoreapp3.1\Zil.Entity.csprojAssemblyReference.cache
+C:\Users\ener-\source\repos\Zil\Zil.Entity\obj\Release\netcoreapp3.1\Zil.Entity.AssemblyInfoInputs.cache
+C:\Users\ener-\source\repos\Zil\Zil.Entity\obj\Release\netcoreapp3.1\Zil.Entity.AssemblyInfo.cs
+C:\Users\ener-\source\repos\Zil\Zil.Entity\obj\Release\netcoreapp3.1\Zil.Entity.dll
+C:\Users\ener-\source\repos\Zil\Zil.Entity\obj\Release\netcoreapp3.1\Zil.Entity.pdb

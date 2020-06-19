@@ -1,0 +1,492 @@
+﻿
+@{
+    ViewData["Title"] = "CreateCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/template/css/instructor-dashboard.css" rel="stylesheet">
+<link href="~/template/css/instructor-responsive.css" rel="stylesheet">
+<link href="~/template/css/jquery-steps.css" rel="stylesheet">
+
+<style>
+
+    .button-group-toggle {
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 3em;
+        border-radius: 3em;
+        padding: 0.333em;
+        background: #ed2a26;
+        color: white;
+        position: relative;
+        /* two radio buttons */
+        /* three items */
+    }
+
+        .button-group-toggle input {
+            display: none;
+        }
+
+        .button-group-toggle label {
+            position: relative;
+            width: 6em;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+
+            .button-group-toggle label:last-of-type:before {
+                background: #fff;
+                content: '';
+                display: block;
+                border-radius: 2.667em;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: transform 0.15s ease;
+                will-change: transform;
+            }
+
+        .button-group-toggle input:checked:last-of-type + label:before {
+            z-index: -1;
+        }
+
+        .button-group-toggle input:checked + label {
+            color: #ed2a26;
+            z-index: 1;
+            position: relative;
+        }
+
+        .button-group-toggle input:nth-of-type(1):nth-last-of-type(2):nth-of-type(1):checked ~ label:last-of-type:before, .button-group-toggle input:nth-of-type(2):nth-last-of-type(1):nth-of-type(1):checked ~ label:last-of-type:before {
+            transform: translate3d(-100%, 0%, 0);
+        }
+
+        .button-group-toggle input:nth-of-type(1):nth-last-of-type(3):nth-of-type(1):checked ~ label:last-of-type:before, .button-group-toggle input:nth-of-type(1):nth-last-of-type(3) ~ input:nth-of-type(1):checked ~ label:last-of-type:before {
+            transform: translate3d(-200%, 0%, 0);
+        }
+
+        .button-group-toggle input:nth-of-type(1):nth-last-of-type(3):nth-of-type(2):checked ~ label:last-of-type:before, .button-group-toggle input:nth-of-type(1):nth-last-of-type(3) ~ input:nth-of-type(2):checked ~ label:last-of-type:before {
+            transform: translate3d(-100%, 0%, 0);
+        }
+</style>
+
+
+
+<!-- Body Start -->
+<div class="wrapper">
+    <div class="sa4d25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="st_title"><i class="uil uil-analysis"></i>KURS OLUŞTUR</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="course_tabs_1">
+                        <div id="add-course-tab" class="step-app">
+                            <ul class="step-steps">
+                                <li class="active">
+                                    <a href="#tab_step1">
+                                        <span class="number"></span>
+                                        <span class="step-name">Genel Bilgiler</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab_step2">
+                                        <span class="number"></span>
+                                        <span class="step-name">Görünüm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab_step3">
+                                        <span class="number"></span>
+                                        <span class="step-name">Kurs Yeri</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab_step4">
+                                        <span class="number"></span>
+                                        <span class="step-name">Son Ayarlar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="step-content">
+                                <div class="step-tab-panel step-tab-info active" id="tab_step1">
+                                    <div class="tab-from-content">
+                                        <div class="course__form">
+                                            <div class="general_info10">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="ui search focus mt-30 lbel25">
+                                                            <label>Başlık*</label>
+                                                            <div class="ui left icon input swdh19">
+                                                                <input class="prompt srch_explore" type="text" placeholder="Kurs başlığını giriniz." name="title" data-purpose="edit-course-title" maxlength="60" id="courseTitle" value="">
+                                                                <div class="badge_num">60</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="ui search focus mt-30 lbel25">
+                                                            <label>Alt Başlık*</label>
+                                                            <div class="ui left icon input swdh19">
+                                                                <input class="prompt srch_explore" type="text" placeholder="Alt başlığı giriniz." name="subtitle" data-purpose="edit-course-title" maxlength="60" id="courseSubtitle" value="">
+                                                                <div class="badge_num2">120</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="course_des_textarea mt-30 lbel25">
+                                                            <label>Açıklama*</label>
+                                                            <div class="course_des_bg">
+                                                                <div class="textarea_dt">
+                                                                    <div class="ui form swdh339">
+                                                                        <div class="field">
+                                                                            <textarea rows="5" name="description" id="courseDescription" placeholder="Açıklama giriniz"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-12">
+                                                        <div class="mt-30 lbel25">
+                                                            <label>Dil*</label>
+                                                        </div>
+                                                        <select id="courseLanguage" style="border: 1px solid #e5e5e5 !important;border-radius: 500rem !important;box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;min-width: 100% !important;padding: .78571429em 2.1em 0.785714em 2em !important;font-family: 'Roboto', sans-serif;">
+
+                                                            <option value="Dil Yok">Dili Seçiniz</option>
+                                                            <option value="English">English</option>
+                                                            <option value="Español">Español</option>
+                                                            <option value="Português">Português</option>
+                                                            <option value="日本語">日本語</option>
+                                                            <option value="Deutsch">Deutsch</option>
+                                                            <option value="Français">Français</option>
+                                                            <option value="Türkçe">Türkçe</option>
+                                                            <option value="हिन्दी">हिन्दी</option>
+                                                            <option value="Italiano">Italiano</option>
+                                                            <option value="Polski">Polski</option>
+                                                            <option value="ภาษาไทย">ภาษาไทย</option>
+                                                            <option value="Română">Română</option>
+                                                            <option value="Telugu">Telugu</option>
+                                                            <option value="मराठी">मराठी</option>
+                                                            <option value="ਪੰਜਾਬੀ">ਪੰਜਾਬੀ</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mt-30 lbel25">
+                                                            <label>Kategori*</label>
+                                                        </div>
+                                                        <select id="courseCategory" style="border: 1px solid #e5e5e5 !important;border-radius: 500rem !important;box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;min-width: 100% !important;padding: .78571429em 2.1em 0.785714em 2em !important;font-family: 'Roboto', sans-serif;">
+                                                            <option value="Kategori Yok">Kategori Seçiniz</option>
+                                                            <option value="Development">Development</option>
+                                                            <option value="Business">Business</option>
+                                                            <option value="Finance & Accounting">Finance & Accounting</option>
+                                                            <option value="IT & Software">IT & Software</option>
+                                                            <option value="Office Productivity">Office Productivity</option>
+                                                            <option value="Personal Development">Personal Development</option>
+                                                            <option value="Design">Design</option>
+                                                            <option value="Marketing">Marketing</option>
+                                                            <option value="Lifestyle">Lifestyle</option>
+                                                            <option value="Photography">Photography</option>
+                                                            <option value="Health & Fitness">Health & Fitness</option>
+                                                            <option value="Music">Music</option>
+                                                            <option value="Teaching & Academics">Teaching & Academics</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-tab-panel step-tab-gallery" id="tab_step2">
+                                    <div class="tab-from-content">
+                                        <div class="course__form">
+                                            <div class="view_info10">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="view_all_dt">
+                                                            <div class="view_img_left">
+                                                                <div class="view__img">
+                                                                    <img src="~/template/images/courses/add_img.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="view_img_right">
+                                                                <h4>Resim</h4>
+                                                                <p>Kurs resminizi buraya yükleyin. Kabul edilmek için kurs imaj kalite standartlarımızı karşılamalıdır. Önemli yönergeler: 750x422 piksel; .jpg, .jpeg ,. gif veya .png. görüntü üzerinde metin yok.</p>
+                                                                <div class="upload__input">
+                                                                    <div class="input-group">
+                                                                        <div class="custom-file">
+                                                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                                                            <label class="custom-file-label" for="inputGroupFile04">Dosya Seçilmedi</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-tab-panel step-tab-gallery" id="tab_step3">
+                                    <div class="tab-from-content">
+                                        <div class="course__form">
+                                            <div class="view_info10">
+
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <div class="row">
+                                                    <div class="button-group-toggle" style="margin-left:36%">
+                                                        <input type="radio" id="radio-walk" name="travel-mode" value="Online" checked />
+                                                        <label for="radio-walk">Online</label>
+                                                        <input type="radio" id="radio-drive" name="travel-mode" value="Birebir" />
+                                                        <label for="radio-drive">Birebir</label>
+                                                    </div>
+                                                </div>
+                                                <div id="online">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <div class="ui search focus mt-30 lbel25">
+                                                                <label>Platform*</label>
+                                                                <div class="ui left icon input swdh19">
+                                                                    <input class="prompt srch_explore" type="text" placeholder="Dersin sunulacağı platform." name="subtitle" data-purpose="edit-course-title" maxlength="60" id="coursePlatform" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <div class="ui search focus mt-30 lbel25">
+                                                                <label>Katılımcı Sayısı*</label>
+                                                                <div class="ui left icon input swdh19">
+                                                                    <input class="prompt srch_explore" type="text" placeholder="Katılımcı Sayısı." name="subtitle" data-purpose="edit-course-title" maxlength="60" id="courseHumanCount" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div id="birebir">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <div class="mt-30 lbel25">
+                                                                <label>Ülke*</label>
+                                                            </div>
+                                                            <select name="country" class="countries" id="countryId" style="border: 1px solid #e5e5e5 !important;border-radius: 500rem !important;box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;min-width: 100% !important;padding: .78571429em 2.1em 0.785714em 2em !important;font-family: 'Roboto', sans-serif;">
+                                                                <option value="">Ülke Seçiniz</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <div class="mt-30 lbel25">
+                                                                <label>İl*</label>
+                                                            </div>
+                                                            <select name="state" class="states" id="stateId" style="border: 1px solid #e5e5e5 !important;border-radius: 500rem !important;box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;min-width: 100% !important;padding: .78571429em 2.1em 0.785714em 2em !important;font-family: 'Roboto', sans-serif;">
+                                                                <option value="">İl Seçiniz</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <div class="mt-30 lbel25">
+                                                                <label>İlçe*</label>
+                                                            </div>
+                                                            <select name="city" class="cities" id="cityId" style="border: 1px solid #e5e5e5 !important;border-radius: 500rem !important;box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;min-width: 100% !important;padding: .78571429em 2.1em 0.785714em 2em !important;font-family: 'Roboto', sans-serif;">
+                                                                <option value="">İlçe Seçiniz</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <div class="ui search focus mt-30 lbel25">
+                                                                <label>Mekan Adı*</label>
+                                                                <div class="ui left icon input swdh19">
+                                                                    <input class="prompt srch_explore" type="text" placeholder="Katılımcı Sayısı." name="courseArea" data-purpose="edit-course-title" maxlength="120" id="courseArea" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <div class="ui search focus mt-30 lbel25">
+                                                                <label>Katılımcı Sayısı*</label>
+                                                                <div class="ui left icon input swdh19">
+                                                                    <input class="prompt srch_explore" type="text" placeholder="Katılımcı Sayısı." name="subtitle" data-purpose="edit-course-title" maxlength="60" id="courseHumanCountOne" value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <br />
+                                                    <br />
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="course_des_textarea mt-30 lbel25">
+                                                            <label>Kurs Yeri Açık Adres*</label>
+                                                            <div class="course_des_bg">
+                                                                <div class="textarea_dt">
+                                                                    <div class="ui form swdh339">
+                                                                        <div class="field">
+                                                                            <textarea rows="5" name="courseAreaAdress" id="courseAreaAdress" placeholder="Kurs Yeri Açık Adresi Giriniz"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="step-tab-panel step-tab-gallery" id="tab_step4">
+                                    <br />
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="course_des_textarea mt-30 lbel25">
+                                                <label>Kurs Ön Koşul</label>
+                                                <div class="course_des_bg">
+                                                    <div class="textarea_dt">
+                                                        <div class="ui form swdh339">
+                                                            <div class="field">
+                                                                <textarea rows="5" name="coursePrecondition" id="coursePrecondition" placeholder="Lütfen Gereksinimleri Giriniz"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                         
+
+
+
+
+
+
+
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="ui form swdh30">
+                                                <select id="courseLevel" style="border: 1px solid #e5e5e5 !important;border-radius: 500rem !important;box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1) !important;min-width: 100% !important;padding: .78571429em 2.1em 0.785714em 2em !important;font-family: 'Roboto', sans-serif;">
+                                                    <option value="Başlangıç">Başlangıç</option>
+                                                    <option value="Orta">Orta</option>
+                                                    <option value="İleri">İleri</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="ui search focus mt-30 lbel25">
+                                                <label>Kurs Ücreti*</label>
+                                                <div class="ui left icon input swdh19">
+                                                    <input class="prompt srch_explore" type="text" placeholder="Kurs Ücreti" name="coursePrice" data-purpose="edit-course-title"  id="coursePrice" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="step-footer step-tab-pager">
+                                    <button data-direction="prev" class="btn btn-default steps_btn">Geri</button>
+                                    <button data-direction="next" class="btn btn-default steps_btn">İleri</button>
+                                    <button data-direction="finish" class="btn btn-default steps_btn">Kaydet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Body End -->
+
+    <script src="~/template/js/vertical-responsive-menu.min.js"></script>
+    <script src="~/template/js/jquery-3.3.1.min.js"></script>
+    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+    <script src="~/template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/template/vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="~/template/vendor/semantic/semantic.min.js"></script>
+    <script src="~/template/js/custom.js"></script>
+    <script src="~/template/js/night-mode.js"></script>
+    <script src="~/template/js/jquery-steps.min.js"></script>
+    <script src="~/js/Util/Ajax.js"></script>
+    <script>
+        $('#add-course-tab').steps({
+            onFinish: function () {
+                var data = {
+                    "CourseTitle": $("#courseTitle").val(),
+                    "CourseSubtitle": $("#courseSubtitle").val(),
+                    "CourseDescription": $("#courseDescription").val(),
+                    "CourseLanguage": $("#courseLanguage").val(),
+                    "CourseCategory": $("#courseCategory").val(),
+
+                    "CoursePrecondition" : $("#coursePrecondition").val(),
+                    "CourseLevel" : $("#courseLevel").val(),
+                    "CoursePlatform" : $("#coursePlatform").val(),
+                    "CourseHumanCount" : $("#courseHumanCount ").val(),
+                    "CountryId" : $("#countryId").val(),
+                    "StateId" : $("#stateId").val(),
+                    "CityId" : $("#cityId").val(),
+                    "CourseArea" : $("#courseArea").val(),
+                    "CourseAreaAdress" : $("#courseAreaAdress").val(),
+                    "CourseHumanCountOne" : $("#courseHumanCountOne").val(),
+                    "CoursePrice" : $("#coursePrice").val(),
+                }
+
+
+                Util.Ajax.Generic("/kurs", data, "POST", "json", false, null, success, null, null);
+
+
+                function success(status) {
+                    if (status.operation == "Success") {
+                        window.location.href = '/anasayfa';
+                    }
+                }
+
+            }
+        });
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#online").hide();
+            $("#birebir").hide();
+
+            $(".button-group-toggle").click(function () {
+                var radioValue = $("input[name='travel-mode']:checked").val();
+
+                if (radioValue == "Online") {
+                    $("#online").show();
+                    $("#birebir").hide();
+                } else {
+                    $("#online").hide();
+                    $("#birebir").show();
+                }
+            });
+        });
+
+    </script>
